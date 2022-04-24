@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ProductModel } from './models/product.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  public url = 'DIGITE AQUI A URL DA API QUE ENTREGA OS DADOS DO PRODUTO';
+  public url = environment.apiEndpoint;
 
   constructor(
     private http: HttpClient
